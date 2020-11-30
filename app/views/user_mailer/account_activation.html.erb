@@ -1,0 +1,8 @@
+<h1>Share App</h1>
+
+<p>Hi <%= @user.name %>, </p>
+<p>
+Welcome to the Share App! Click on the link below to active your account: 
+</p>
+
+<%= link_to "Activate", edit_account_activation_url(@user.activation_token, email: @user.email) %>
